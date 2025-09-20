@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>COA Dashboard</title>
+  <link rel="stylesheet" href="/static/css/coa.css" />
+</head>
+<body>
+  <main class="container">
+    <h1>Welcome, {{ request.user.username }}</h1>
+    <p>Your role: {{ request.user.role }}</p>
+    <nav>
+      <a href="{% url 'accounts:logout' %}">Logout</a>
+    </nav>
+  </main>
+</body>
+</html>
